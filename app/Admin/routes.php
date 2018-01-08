@@ -10,7 +10,7 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index');
+    $router->get('/login', 'HomeController@index');
 
     $router->resource('users', UserController::class);//路由绑定，基本的curd
 
