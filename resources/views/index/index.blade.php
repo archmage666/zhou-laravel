@@ -14,8 +14,8 @@
                     </ul>
                 </div>
                 <div class="top-nav-menu-right">
-                    <a>立即登录</a>
-                    <a>注册新帐号</a>
+                    <a href="#">立即登录</a>
+                    <a href="#">注册新帐号</a>
                 </div>
                 <div class="clear"></div>
             </div>
