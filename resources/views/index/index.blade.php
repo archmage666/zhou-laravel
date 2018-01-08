@@ -20,5 +20,19 @@
                 <div class="clear"></div>
             </div>
         </div>
+
+        <div class="middle">
+            <div>
+                <div class="logo">
+                    <a href="">
+                        <img src="{{ asset('images/logo.png') }}" />
+                    </a>
+                </div>
+                <div class="advertising">
+
+                </div>
+            </div>
+        </div>
+
     </div>
 @endsection
