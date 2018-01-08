@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * 前台路由组
+ */
+Route::get('/', 'IndexController@index');
+
+
