@@ -19,4 +19,7 @@ Route::get('/', 'IndexController@index');
 Route::get('/tools/unixtime', 'ToolsController@unixtime');
 Route::post('/tools/unixtimeAction', 'ToolsController@unixtimeAction');
 
+Route::get('/tools/base', 'ToolsController@base64');
+Route::post('/tools/baseAction', 'ToolsController@baseAction');
+
 

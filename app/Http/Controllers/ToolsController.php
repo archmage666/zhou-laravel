@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class ToolsController extends Controller
 {
+
+    /**
+     * 时间戳转换view层
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function unixtime()
     {
 
@@ -13,6 +19,11 @@ class ToolsController extends Controller
 
     }
 
+    /**
+     * 时间戳转换逻辑
+     *
+     * @param Request $request
+     */
     public function unixtimeAction(Request $request)
     {
 
@@ -68,13 +79,42 @@ class ToolsController extends Controller
 
             }
 
-
             json_return(3,'参数错误',[]);
 
         }
 
-
         json_return(3,'非法请求',[]);
+    }
+
+
+    public function base64()
+    {
+
+        return view('tools.base');
 
     }
+
+
+    public function baseAction()
+    {
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

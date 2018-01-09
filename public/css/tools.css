@@ -1,3 +1,4 @@
+/*时间戳*/
 .tools-unixtime{width:100%;background-color: #e8e8e8;font-size: 14px;}
 .tools-unixtime input{height:24px;line-height:24px;}
 .tools-unixtime-content{width:1000px;margin:0 auto;background-color:#fff;}
@@ -5,3 +6,4 @@
 .tools-unixtime-left{float:left;display: inline-block;margin-right:10px;}
 .tools-unixtime-right{float:left;display: inline-block;}
 .tools-unixtime-right-con{margin-right:10px;border:1px solid #c6cede;background-color:#fff;text-align:center;line-height:30px;height:30px;padding:0 10px 0 10px;cursor: pointer;}
+/*Base64*/
