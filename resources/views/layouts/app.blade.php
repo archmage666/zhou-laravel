@@ -16,7 +16,7 @@
             <div class="top-nav-menu">
                 <div class="top-nav-menu-left">
                     <ul>
-                        <li><a href="#"><span>短链接生成</span></a></li>
+                        <li><a href="{{ url('/tools/tdurlen') }}"><span>短链接生成</span></a></li>
                         <li><a href="{{ url('/tools/unixtime') }}"><span>Unix时间戳</span></a></li>
                         <li><a href="{{ url('/tools/base64enc') }}"><span>Base64加密/解密</span></a></li>
                         <li><a href="{{ url('/tools/urlenc') }}"><span>UrlEncode加密/解密</span></a></li>
@@ -54,8 +54,8 @@
                     <li>
                         <a href="javascript:void(0);">短链服务</a>
                         <ul>
-                            <li><a href="#">短链生成</a></li>
-                            <li><a href="#">短链解码</a></li>
+                            <li><a href="{{ url('/tools/tdurlen') }}">短链生成</a></li>
+                            <li><a href="{{ url('/tools/tdurlde') }}">短链解析</a></li>
                         </ul>
                     </li>
                     <li>
@@ -79,7 +79,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0);">动态加密</a>
+                        <a href="javascript:void(0);">专属动态加密</a>
                         <ul>
                             <li><a href="#">加密</a></li>
                             <li><a href="#">解密</a></li>

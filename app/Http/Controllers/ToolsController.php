@@ -8,6 +8,38 @@ class ToolsController extends Controller
 {
 
     /**
+     * 短链接生成页面 模版
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function tdurlEn()
+    {
+
+        return view('tools.tdurlEn');
+
+    }
+
+    public function tdurlDe()
+    {
+
+        return view('tools.tdurlDe');
+
+    }
+
+    /**
+     * 短链接生成 解析 操作方法
+     *
+     * @param Request $request
+     */
+    public function tdurlAction(Request $request)
+    {
+
+
+
+    }
+
+
+    /**
      * 时间戳转换view层
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -156,7 +188,11 @@ class ToolsController extends Controller
         json_return(1,'非法请求',[]);
     }
 
-
+    /**
+     * UrlEncode 加密模版
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function urlenc()
     {
 
@@ -164,7 +200,11 @@ class ToolsController extends Controller
 
     }
 
-
+    /**
+     * UrlDecode 解密模版
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function urldec()
     {
 
@@ -172,7 +212,11 @@ class ToolsController extends Controller
 
     }
 
-
+    /**
+     * UrlEncode 加密/解密操方法
+     *
+     * @param Request $request
+     */
     public function urlAction(Request $request)
     {
         try {
@@ -207,9 +251,8 @@ class ToolsController extends Controller
 
 
         } catch (\Exception $e) {
-            //app('logger')->channel('pay')->error($e->getMessage()." ".$e->getFile()." ".$e->getLine());
-            //return $this->makeJsonpResponse(-1, "服务繁忙，请稍后再试。", []);
-            json_return(-1,'服务繁忙，请稍后再试',[]);
+            //$e->getMessage()." ".$e->getFile()." ".$e->getLine();
+            json_return(-1,$e->getMessage(),[]);
         }
     }
 

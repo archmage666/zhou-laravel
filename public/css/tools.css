@@ -4,6 +4,15 @@
 .tools-breadcrumbs-text label{color:#747d87}
 .tools-breadcrumbs-text a{color:#0474c8}
 .tools-breadcrumbs-text a:hover{color:#ff0000;text-decoration:underline;}
+/*tdurl*/
+.tools-tdurl{width:100%;background-color: #e8e8e8;font-size: 14px;}
+.tools-tdurl-content{width:1000px;margin:0 auto;background-color:#fff;}
+.tools-tdurl-content-main{width: 80%;margin:0 auto;padding: 30px 0 30px 0;}
+.tools-tdurl-top,.tools-tdurl-bottom{width: 700px; margin: 0 auto;}
+.tools-textarea{resize:none}
+.tdurl-but{float: right;margin:10px 26px 0 0;}
+.tdurlBtn{background-color:#55a7e3;color:#fff;border: none;padding:0 12px;height:35px;line-height: 35px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;cursor: pointer}
+.tdurlBtn:hover {filter: alpha(opacity=80);opacity: 0.8;}
 /*时间戳*/
 .tools-unixtime{width:100%;background-color: #e8e8e8;font-size: 14px;}
 .tools-unixtime input{height:24px;line-height:24px;}

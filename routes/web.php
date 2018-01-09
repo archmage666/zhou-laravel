@@ -27,4 +27,8 @@ Route::get('/tools/urlenc', 'ToolsController@urlenc');
 Route::get('/tools/urldec', 'ToolsController@urldec');
 Route::post('/tools/urlAction', 'ToolsController@urlAction');
 
+Route::get('/tools/tdurlen', 'ToolsController@tdurlEn');
+Route::get('/tools/tdurlde', 'ToolsController@tdurlDe');
+Route::post('/tools/tdurlAction', 'ToolsController@tdurlAction');
+
 
