@@ -22,18 +22,24 @@
             <div class="tools-urlencode-content-main">
                 <div class="tools-urlencode-top">
                     <label class="block">原码</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-dec" placeholder="urlencode加密后的内容"></textarea>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-urlen" placeholder="需要进行UrlEncode加密的url地址"></textarea>
                 </div>
 
                 <div class="tools-urlencode-bottom">
-                    <label class="block">Urlencode解密后</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-dec-show" placeholder="urlencode解密后的内容"></textarea>
+                    <label class="block">UrlEncode加密后</label>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc-show" placeholder="UrlEncode加密后的内容"></textarea>
                 </div>
 
                 <div class="urlencode-but">
-                    <input type="button" id="urlencodeDec" value="urlencode解密" class="urlencodeBtn">
+                    <input type="button" id="urlencode" value="UrlEncode加密" class="urlencodeBtn">
                 </div>
                 <div class="clear"></div>
+            </div>
+        </div>
+        <div class="tools-introduce">
+            <div class="tools-introduce-text">
+                <label class="ml10">工具简介</label>
+                <p class="ml10 mr10">为了让包含中文的URL可以使用，您可以使用本工具对中文进行UrlEncode编码。</p>
             </div>
         </div>
     </div>

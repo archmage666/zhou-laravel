@@ -36,6 +36,12 @@
                 <div class="clear"></div>
             </div>
         </div>
+        <div class="tools-introduce">
+            <div class="tools-introduce-text">
+                <label class="ml10">工具简介</label>
+                <p class="ml10 mr10">Base64编码要求把3个8位字节（3*8=24）转化为4个6位的字节（4*6=24），之后在6位的前面补两个0，形成8位一个字节的形式。 如果剩下的字符不足3个字节，则用0填充，输出字符使用‘=’，因此编码后输出的文本末尾可能会出现1或2个‘=’。</p>
+            </div>
+        </div>
     </div>
 @endsection
 

@@ -1,7 +1,6 @@
 /**
  * 时间戳操作
  */
-
 //时间戳转换为北京时间
 $(function(){
     $('#firstbutton').click(function(){
@@ -29,7 +28,6 @@ $(function(){
         });
     });
 });
-
 //北京时间转换为时间戳
 $(function(){
     $('#secondbutton').click(function(){
@@ -56,7 +54,6 @@ $(function(){
         });
     });
 });
-
 //北京时间转换为时间戳二
 $(function(){
     $('#thirdbutton').click(function(){
@@ -88,7 +85,6 @@ $(function(){
         });
     });
 });
-
 /**
  * Base64操作
  */
@@ -118,7 +114,6 @@ $(function(){
         });
     });
 });
-
 //解码
 $(function(){
     $('#base64Dec').click(function(){
@@ -145,10 +140,67 @@ $(function(){
         });
     });
 });
-
 /**
  * urlencode操作
  */
+//加密
+$(function(){
+    $('#urlencode').click(function(){
+
+        var encode    = $("#textarea-urlen").val();
+
+        if (!encode) {
+            alert('请输入需要加密的url');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/urlAction",
+            dataType: "json",
+            data:{encode:encode},
+            success: function(data){
+                if(data.code == 0){
+                    $("#textarea-enc-show").val(data.data.encode);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
+//解密
+$(function(){
+    $('#urldecode').click(function(){
+
+        var decode    = $("#textarea-urlde").val();
+
+        if (!decode) {
+            alert('请输入需要解密的url');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/urlAction",
+            dataType: "json",
+            data:{decode:decode},
+            success: function(data){
+                if(data.code == 0){
+                    $("#textarea-dec-show").val(data.data.decode);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
+
+
+
+
+
+
 
 
 

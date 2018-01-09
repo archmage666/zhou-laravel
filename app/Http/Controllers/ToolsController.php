@@ -173,14 +173,43 @@ class ToolsController extends Controller
     }
 
 
-    public function urlAction()
+    public function urlAction(Request $request)
     {
         try {
+
+            if ($request->ajax())
+            {
+
+                $encode = $request->input('encode','');
+                $decode = $request->input('decode','');
+
+                if(!empty($encode))
+                {
+
+                    $urlencode = urlencode($encode);
+
+                    json_return(0,'UrlEncode成功',['encode' => $urlencode]);
+
+                }
+
+                if(!empty($decode))
+                {
+
+                    $urldecode = urldecode($decode);
+
+                    json_return(0,'UrlEncode成功',['decode' => $urldecode]);
+
+                }
+
+                json_return(1,'参数错误',[]);
+
+            }
 
 
         } catch (\Exception $e) {
             //app('logger')->channel('pay')->error($e->getMessage()." ".$e->getFile()." ".$e->getLine());
             //return $this->makeJsonpResponse(-1, "服务繁忙，请稍后再试。", []);
+            json_return(-1,'服务繁忙，请稍后再试',[]);
         }
     }
 
