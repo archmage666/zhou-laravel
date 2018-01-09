@@ -87,7 +87,7 @@ class ToolsController extends Controller
     }
 
     /**
-     *
+     * base64视图模版
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -106,6 +106,8 @@ class ToolsController extends Controller
     }
 
     /**
+     * base64操作类
+     *
      * @param Request $request
      */
     public function baseAction(Request $request)
@@ -122,7 +124,13 @@ class ToolsController extends Controller
 
                 $baseencode = base64_encode($encode);
 
-                json_return(0,'编码成功',['encode' => $baseencode]);
+                if($baseencode === false || $baseencode == ''){
+
+                    json_return(2,'输入内容有误',[]);
+
+                }
+
+                json_return(0,'base64加密成功',['encode' => $baseencode]);
 
             }
 
@@ -131,15 +139,49 @@ class ToolsController extends Controller
 
                 $basedecode = base64_decode($decode);
 
-                json_return(0,'编码成功',['decode' => $basedecode]);
+                if($basedecode === false || $basedecode == ''){
+
+                    json_return(3,'输入内容有误',[]);
+
+                }
+
+                json_return(0,'base64解密成功',['decode' => $basedecode]);
 
             }
 
-            json_return(1,'参数错误',[]);
+            json_return(4,'参数错误',[]);
 
         }
 
-        json_return(2,'非法请求',[]);
+        json_return(1,'非法请求',[]);
+    }
+
+
+    public function urlenc()
+    {
+
+        return view('tools.urlEnc');
+
+    }
+
+
+    public function urldec()
+    {
+
+        return view('tools.urlDec');
+
+    }
+
+
+    public function urlAction()
+    {
+        try {
+
+
+        } catch (\Exception $e) {
+            //app('logger')->channel('pay')->error($e->getMessage()." ".$e->getFile()." ".$e->getLine());
+            //return $this->makeJsonpResponse(-1, "服务繁忙，请稍后再试。", []);
+        }
     }
 
 

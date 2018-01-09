@@ -23,4 +23,8 @@ Route::get('/tools/base64enc', 'ToolsController@base64enc');
 Route::get('/tools/base64dec', 'ToolsController@base64dec');
 Route::post('/tools/baseAction', 'ToolsController@baseAction');
 
+Route::get('/tools/urlenc', 'ToolsController@urlenc');
+Route::get('/tools/urldec', 'ToolsController@urldec');
+Route::post('/tools/urlAction', 'ToolsController@urlAction');
+
 

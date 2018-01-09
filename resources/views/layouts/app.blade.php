@@ -19,7 +19,7 @@
                         <li><a href="#"><span>短链接生成</span></a></li>
                         <li><a href="{{ url('/tools/unixtime') }}"><span>Unix时间戳</span></a></li>
                         <li><a href="{{ url('/tools/base64enc') }}"><span>Base64加密/解密</span></a></li>
-                        <li><a href="#"><span>Urlencode加密/解密</span></a></li>
+                        <li><a href="{{ url('/tools/urlenc') }}"><span>Urlencode加密/解密</span></a></li>
                         <li><a href="#"><span>专属动态加密/解密</span></a></li>
                     </ul>
                 </div>
@@ -74,8 +74,8 @@
                     <li>
                         <a href="javascript:void(0);">Urlencode</a>
                         <ul>
-                            <li><a href="#">加密</a></li>
-                            <li><a href="#">解密</a></li>
+                            <li><a href="{{ url('/tools/urlenc') }}">加密</a></li>
+                            <li><a href="{{ url('/tools/urldec') }}">解密</a></li>
                         </ul>
                     </li>
                     <li>

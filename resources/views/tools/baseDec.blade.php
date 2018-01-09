@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Base64解码
+    Base64解密
 @endsection
 
 @section('styles')

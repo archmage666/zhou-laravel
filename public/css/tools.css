@@ -15,3 +15,12 @@
 .base-but{float: right;margin:10px 26px 0 0;}
 .base64Btn{background-color:#55a7e3;color:#fff;border: none;padding:0 12px;height:35px;line-height: 35px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;cursor: pointer}
 .base64Btn:hover {filter: alpha(opacity=80);opacity: 0.8;}
+/*URL加密/解密*/
+.tools-urlencode{width:100%;background-color: #e8e8e8;font-size: 14px;}
+.tools-urlencode-content{width:1000px;margin:0 auto;background-color:#fff;}
+.tools-urlencode-content-main{width: 80%;margin:0 auto;padding: 30px 0 30px 0;}
+.tools-urlencode-top,.tools-urlencode-bottom{width: 700px; margin: 0 auto;}
+.tools-textarea{resize:none}
+.urlencode-but{float: right;margin:10px 26px 0 0;}
+.urlencodeBtn{background-color:#55a7e3;color:#fff;border: none;padding:0 12px;height:35px;line-height: 35px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;cursor: pointer}
+.urlencodeBtn:hover {filter: alpha(opacity=80);opacity: 0.8;}
