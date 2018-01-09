@@ -24,7 +24,7 @@
                     </ul>
                 </div>
                 <div class="top-nav-menu-right">
-                    <a href="#">立即登录</a>
+                    <a href="#" class="mr30">立即登录</a>
                     <a href="#">注册新帐号</a>
                 </div>
                 <div class="clear"></div>
@@ -32,16 +32,17 @@
         </div>
 
         <div class="middle">
-            <div>
-                <div class="logo">
-                    <a href="">
-                        <img src="{{ asset('images/logo.png') }}" />
-                    </a>
-                </div>
-                <div class="advertising">
+            <div class="logo">
+                <a href="">
+                    <img src="{{ asset('images/logo.png') }}" />
+                </a>
+            </div>
+            <div class="advertising">
+                <div class="advertising-box ml10">
 
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
 
         <div class="navbg">
@@ -51,41 +52,41 @@
                         <a href="/">首页</a>
                     </li>
                     <li>
-                        <a href="#">短链服务</a>
+                        <a href="javascript:void(0);">短链服务</a>
                         <ul>
                             <li><a href="#">短链生成</a></li>
                             <li><a href="#">短链解码</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Unix时间戳</a>
+                        <a href="javascript:void(0);">Unix时间戳</a>
                         <ul>
-                            <li><a href="#">时间戳转换</a></li>
+                            <li><a href="{{ url('/tools/unixtime') }}">时间戳转换</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Base64</a>
-                        <ul>
-                            <li><a href="#">编码</a></li>
-                            <li><a href="#">解码</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Urlencode</a>
+                        <a href="javascript:void(0);">Base64</a>
                         <ul>
                             <li><a href="#">编码</a></li>
                             <li><a href="#">解码</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">动态加密</a>
+                        <a href="javascript:void(0);">Urlencode</a>
+                        <ul>
+                            <li><a href="#">编码</a></li>
+                            <li><a href="#">解码</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">动态加密</a>
                         <ul>
                             <li><a href="#">加密</a></li>
                             <li><a href="#">解密</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">待定</a>
+                        <a href="javascript:void(0);">待定</a>
                         <ul>
                             <li><a href="#">待定</a></li>
                             <li><a href="#">待定</a></li>
@@ -93,7 +94,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">待定</a>
+                        <a href="javascript:void(0);">待定</a>
                         <ul>
                             <li><a href="#">待定</a></li>
                             <li><a href="#">待定</a></li>
@@ -101,7 +102,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">待定</a>
+                        <a href="javascript:void(0);">待定</a>
                         <ul>
                             <li><a href="#">待定</a></li>
                             <li><a href="#">待定</a></li>
