@@ -10,6 +10,14 @@
 
 @section('content')
     <div class="tools-urlencode">
+        <div class="tools-breadcrumbs">
+            <div class="tools-breadcrumbs-text">
+                <label class="ml10">当前位置：</label>
+                <a href="/">IT工具</a>
+                <label>></label>
+                <a href="javascript:void(0);">Urlencode加密</a>
+            </div>
+        </div>
         <div class="tools-urlencode-content">
             <div class="tools-urlencode-content-main">
                 <div class="tools-urlencode-top">

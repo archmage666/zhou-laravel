@@ -10,6 +10,14 @@
 
 @section('content')
     <div class="tools-base">
+        <div class="tools-breadcrumbs">
+            <div class="tools-breadcrumbs-text">
+                <label class="ml10">当前位置：</label>
+                <a href="/">IT工具</a>
+                <label>></label>
+                <a href="javascript:void(0);">Base64加密</a>
+            </div>
+        </div>
         <div class="tools-base-content">
             <div class="tools-base-content-main">
                 <div class="tools-base-top">

@@ -1,15 +1,24 @@
 @extends('layouts.app')
 
 @section('title')
-Unix时间戳
+    Unix时间戳
 @endsection
 
 @section('styles')
-<link href="{{ asset('css/tools.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/tools.css') }}" rel="stylesheet" type="text/css">
 @endsection
+
 
 @section('content')
     <div class="tools-unixtime">
+        <div class="tools-breadcrumbs">
+            <div class="tools-breadcrumbs-text">
+                <label class="ml10">当前位置：</label>
+                <a href="/">IT工具</a>
+                <label>></label>
+                <a href="javascript:void(0);">Unix时间戳转换</a>
+            </div>
+        </div>
         <div class="tools-unixtime-content">
             <div class="tools-unixtime-content-main">
                 <div class="tools-unixtime-left">
@@ -51,8 +60,6 @@ Unix时间戳
                     <input type="button" value="转换Unix时间戳" id="thirdbutton" class="tools-unixtime-right-con">
                     <input type="text" name="" id="thirdtimeshow" size="20" readonly="">
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -60,5 +67,5 @@ Unix时间戳
 
 
 @section('js')
-<script src="{{ asset('js/tools.js') }}"></script>
+    <script src="{{ asset('js/tools.js') }}"></script>
 @endsection

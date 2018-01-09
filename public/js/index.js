@@ -3,13 +3,9 @@
  */
 
 $(document).ready(function(){
-
-    $(".navbg").capacityFixed();
-
     $("#navul > li").not(".navhome").hover(function(){
         $(this).addClass("navmoon");
     },function(){
         $(this).removeClass("navmoon");
     });
-
 });

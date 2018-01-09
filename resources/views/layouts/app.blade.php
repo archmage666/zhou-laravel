@@ -109,18 +109,14 @@
                             <li><a href="#">待定</a></li>
                         </ul>
                     </li>
-
                 </ul>
             </div>
         </div>
-
     </div>
-
 @yield('content')
 
 <!-- Js -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/script.js') }}"></script>
 <script src="{{ asset('js/index.js') }}"></script>
 @yield('js')
 </body>
