@@ -14,12 +14,12 @@
             <div class="tools-base-content-main">
                 <div class="tools-base-top">
                     <label class="block">原码</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc" placeholder="输入需要base64加密的内容"></textarea>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc" placeholder="输入加密前的内容"></textarea>
                 </div>
 
                 <div class="tools-base-bottom">
-                    <label class="block">base64编码后</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc-show" placeholder="这里将显示base64加密后的内容"></textarea>
+                    <label class="block">base64加密后</label>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc-show" placeholder="base64加密后的内容"></textarea>
                 </div>
 
                 <div class="base-but">
