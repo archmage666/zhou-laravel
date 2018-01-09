@@ -1,3 +1,4 @@
+/*网站头部*/
 .main{width:100%}
 .top-nav{height:30px;background-color: #fbfbfb;border-bottom: 1px solid #e8e8e8;}
 .top-nav-menu{width:1000px;margin:0 auto;}
@@ -6,6 +7,17 @@
 .top-nav-menu-left span{color: #747d87}
 .top-nav-menu .top-nav-menu-right{float: right;}
 .top-nav-menu-right a{float: left;line-height:30px;margin-right:20px;color: #747d87}
-
 .middle{width:1000px;margin: 0 auto;padding: 10px 0;border:0px solid #000;}
-
+.col1000{width:1000px;margin:auto;}
+.navbg{height:40px;width:100%;background:#338de6;box-shadow:1px 1px 7px #999;left:0;}
+#navul li{float:left;margin-right:1px;width:100px;height:40px;position:relative;text-align:center;line-height:40px;cursor: pointer;}
+#navul li.navhome{text-align:left;padding:0 0px 0 40px;width:60px;}
+#navul li a:link, #navul li a:visited{color:#fff;}
+#navul li ul{display:none;position:absolute;z-index:10000;top:38px;left:-1px;background:#55a7e3;border:#2f87c1 1px solid;border-bottom:none;}
+#navul li ul li{display:block;width:98px;float:none;margin-right:0px;height:28px;position:relative;line-height:28px;border-bottom:#2f87c1 1px solid;font-size:12px;}
+#navul li.navmoon{background:#55a7e3;border-left:#2f87c1 1px solid;border-right:#2f87c1 1px solid;height:40px;line-height:40px;}
+#navul li.navmoon a{color:#fff;}
+#navul li.navhome a:hover{color:#fff;}
+#navul li.navmoon ul{display:block;}
+#navul li.navmoon ul a{display:block;width:98px;height:28px;line-height:28px;}
+#navul li.navmoon ul a:hover{background:#338de6;}

@@ -4,16 +4,123 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>首页</title>
+    <title>@yield('title')</title>
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css">
+    @yield('styles')
 </head>
 <body>
+    <div class="main">
+        <div class="top-nav">
+            <div class="top-nav-menu">
+                <div class="top-nav-menu-left">
+                    <ul>
+                        <li><a href="#"><span>短链接生成</span></a></li>
+                        <li><a href="{{ url('/tools/unixtime') }}"><span>Unix时间戳</span></a></li>
+                        <li><a href="#"><span>Base64编码/解码</span></a></li>
+                        <li><a href="#"><span>Urlencode编码/解码</span></a></li>
+                        <li><a href="#"><span>专属动态加密/解密</span></a></li>
+                    </ul>
+                </div>
+                <div class="top-nav-menu-right">
+                    <a href="#">立即登录</a>
+                    <a href="#">注册新帐号</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="middle">
+            <div>
+                <div class="logo">
+                    <a href="">
+                        <img src="{{ asset('images/logo.png') }}" />
+                    </a>
+                </div>
+                <div class="advertising">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="navbg">
+            <div class="col1000">
+                <ul id="navul" class="zoom">
+                    <li class="navhome">
+                        <a href="/">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">短链服务</a>
+                        <ul>
+                            <li><a href="#">短链生成</a></li>
+                            <li><a href="#">短链解码</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Unix时间戳</a>
+                        <ul>
+                            <li><a href="#">时间戳转换</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Base64</a>
+                        <ul>
+                            <li><a href="#">编码</a></li>
+                            <li><a href="#">解码</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Urlencode</a>
+                        <ul>
+                            <li><a href="#">编码</a></li>
+                            <li><a href="#">解码</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">动态加密</a>
+                        <ul>
+                            <li><a href="#">加密</a></li>
+                            <li><a href="#">解密</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">待定</a>
+                        <ul>
+                            <li><a href="#">待定</a></li>
+                            <li><a href="#">待定</a></li>
+                            <li><a href="#">待定</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">待定</a>
+                        <ul>
+                            <li><a href="#">待定</a></li>
+                            <li><a href="#">待定</a></li>
+                            <li><a href="#">待定</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">待定</a>
+                        <ul>
+                            <li><a href="#">待定</a></li>
+                            <li><a href="#">待定</a></li>
+                            <li><a href="#">待定</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
 
 @yield('content')
 
 <!-- Js -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/index.js') }}"></script>
+@yield('js')
 </body>
 </html>

@@ -16,4 +16,7 @@
  */
 Route::get('/', 'IndexController@index');
 
+Route::get('/tools/unixtime', 'ToolsController@unixtime');
+Route::post('/tools/unixtimeAction', 'ToolsController@unixtimeAction');
+
 

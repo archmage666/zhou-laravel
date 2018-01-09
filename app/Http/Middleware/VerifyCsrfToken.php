@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        //这里是排除X-CSRF-Token验证的路由组
+        'tools/*'
     ];
 }

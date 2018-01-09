@@ -1,0 +1,58 @@
+/**
+ * 时间戳操作
+ */
+
+//时间戳转换为北京时间
+$(function(){
+    $('#firstbutton').click(function(){
+
+        var firstunixtime = $("#firstunixtime").val();
+
+        if (!firstunixtime) {
+            alert('时间戳不能为空');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/unixtimeAction",
+            dataType: "json",
+            data:{firstunixtime:firstunixtime},
+            success: function(data){
+                //console.log(data);
+                if(data.code == 0){
+                    $("#firsttimeshow").val(data.data.time);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
+
+//北京时间转换为时间戳
+$(function(){
+    $('#secondbutton').click(function(){
+
+        var secondunixtime = $("#secondunixtime").val();
+
+        if (!secondunixtime) {
+            alert('时间不能为空');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/unixtimeAction",
+            dataType: "json",
+            data:{secondunixtime:secondunixtime},
+            success: function(data){
+                if(data.code == 0){
+                    $("#secondtimeshow").val(data.data.unixtime);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});

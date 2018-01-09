@@ -7,9 +7,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Routing\Controller as BaseController;
-
-class IndexController extends BaseController
+class IndexController extends Controller
 {
 
     public function index()
