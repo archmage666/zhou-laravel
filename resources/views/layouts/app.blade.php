@@ -18,7 +18,7 @@
                     <ul>
                         <li><a href="#"><span>短链接生成</span></a></li>
                         <li><a href="{{ url('/tools/unixtime') }}"><span>Unix时间戳</span></a></li>
-                        <li><a href="{{ url('/tools/base') }}"><span>Base64编码/解码</span></a></li>
+                        <li><a href="{{ url('/tools/base64enc') }}"><span>Base64编码/解码</span></a></li>
                         <li><a href="#"><span>Urlencode编码/解码</span></a></li>
                         <li><a href="#"><span>专属动态加密/解密</span></a></li>
                     </ul>
@@ -67,8 +67,8 @@
                     <li>
                         <a href="javascript:void(0);">Base64</a>
                         <ul>
-                            <li><a href="{{ url('/tools/base') }}">编码</a></li>
-                            <li><a href="{{ url('/tools/base') }}">解码</a></li>
+                            <li><a href="{{ url('/tools/base64enc') }}">编码</a></li>
+                            <li><a href="{{ url('/tools/base64dec') }}">解码</a></li>
                         </ul>
                     </li>
                     <li>

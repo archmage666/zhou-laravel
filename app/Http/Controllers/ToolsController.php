@@ -86,20 +86,44 @@ class ToolsController extends Controller
         json_return(3,'非法请求',[]);
     }
 
-
-    public function base64()
+    /**
+     *
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function base64enc()
     {
 
-        return view('tools.base');
+        return view('tools.baseEnc');
 
     }
 
-
-    public function baseAction()
+    public function base64dec()
     {
 
+        return view('tools.baseDec');
+
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function baseAction(Request $request)
+    {
+
+        if ($request->ajax())
+        {
+
+            $encode = $request->input('encode','');
+
+            $baseencode = base64_encode($encode);
+
+            json_return(0,'编码成功',['encode' => $baseencode]);
+
+        }
 
 
+        json_return(3,'非法请求',[]);
     }
 
 

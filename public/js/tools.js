@@ -91,3 +91,28 @@ $(function(){
 /**
  * Base64操作
  */
+$(function(){
+    $('#base64Enc').click(function(){
+
+        var encode    = $("#textarea-enc").val();
+
+        if (!encode) {
+            alert('请输入需要加密的内容');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/baseAction",
+            dataType: "json",
+            data:{encode:encode},
+            success: function(data){
+                if(data.code == 0){
+                    $("#textarea-enc-show").val(data.data.encode);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
