@@ -20,6 +20,12 @@ class ToolsController extends Controller
         {
             $firstunixtime = $request->input('firstunixtime','');
             $secondunixtime = $request->input('secondunixtime','');
+            $year = $request->input('year','');
+            $month = $request->input('month','');
+            $day = $request->input('day','');
+            $hour = $request->input('hour','');
+            $minute = $request->input('minute','');
+            $second = $request->input('second','');
 
             if(!empty($firstunixtime))
             {
@@ -45,8 +51,25 @@ class ToolsController extends Controller
 
             }
 
+            if(!empty($year) && !empty($month) && !empty($day) && !empty($hour) && !empty($minute) && !empty($second))
+            {
 
-            json_return(2,'参数错误',[]);
+                $thirdunixtime = $year.'-'.$month.'-'.$day.' '.$hour.':'.$minute.':'.$second;
+
+                $unixtime = strtotime($thirdunixtime);
+
+                if($unixtime === false){
+
+                    json_return(2,'输入的时间有误',[]);
+
+                }
+
+                json_return(0,'转换成功',['unixtime' => $unixtime]);
+
+            }
+
+
+            json_return(3,'参数错误',[]);
 
         }
 

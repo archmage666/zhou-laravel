@@ -56,3 +56,35 @@ $(function(){
         });
     });
 });
+
+//北京时间转换为时间戳二
+$(function(){
+    $('#thirdbutton').click(function(){
+
+        var year    = $("#year").val();
+        var month   = $("#month").val();
+        var day     = $("#day").val();
+        var hour    = $("#hour").val();
+        var minute  = $("#minute").val();
+        var second  = $("#second").val();
+
+        if (!year || !month || !day || !hour || !minute || !second) {
+            alert('需填写完整的时间');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/unixtimeAction",
+            dataType: "json",
+            data:{year:year,month:month,day:day,hour:hour,minute:minute,second:second},
+            success: function(data){
+                if(data.code == 0){
+                    $("#thirdtimeshow").val(data.data.unixtime);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
