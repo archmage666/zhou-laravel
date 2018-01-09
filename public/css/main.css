@@ -10,7 +10,7 @@
 .middle{width:1000px;margin: 0 auto;padding: 10px 0;}
 .middle .logo{float: left;display: inline-block}
 .middle .advertising{float:right;display: inline-block}
-.middle .advertising .advertising-box{width:420px;height:60px;border: 1px solid #e8e8e8; background:url(../images/advertising.gif) right bottom no-repeat;}
+.middle .advertising .advertising-box{width:420px;height:60px;border: 1px solid #e8e8e8;background: url(../images/advertising.gif) right bottom no-repeat;}
 
 .col1000{width:1000px;margin:auto;}
 .navbg{height:40px;width:100%;background:#338de6;box-shadow:1px 1px 7px #999;left:0;}

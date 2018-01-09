@@ -39,7 +39,7 @@
             </div>
             <div class="advertising">
                 <div class="advertising-box ml10">
-
+                    <a href=""><img src="" /></a>
                 </div>
             </div>
             <div class="clear"></div>
