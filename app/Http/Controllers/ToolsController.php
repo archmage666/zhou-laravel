@@ -115,15 +115,31 @@ class ToolsController extends Controller
         {
 
             $encode = $request->input('encode','');
+            $decode = $request->input('decode','');
 
-            $baseencode = base64_encode($encode);
+            if(!empty($encode))
+            {
 
-            json_return(0,'编码成功',['encode' => $baseencode]);
+                $baseencode = base64_encode($encode);
+
+                json_return(0,'编码成功',['encode' => $baseencode]);
+
+            }
+
+            if(!empty($decode))
+            {
+
+                $basedecode = base64_decode($decode);
+
+                json_return(0,'编码成功',['decode' => $basedecode]);
+
+            }
+
+            json_return(1,'参数错误',[]);
 
         }
 
-
-        json_return(3,'非法请求',[]);
+        json_return(2,'非法请求',[]);
     }
 
 

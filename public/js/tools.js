@@ -91,6 +91,7 @@ $(function(){
 /**
  * Base64操作
  */
+//编码
 $(function(){
     $('#base64Enc').click(function(){
 
@@ -116,3 +117,48 @@ $(function(){
         });
     });
 });
+
+//解码
+$(function(){
+    $('#base64Dec').click(function(){
+
+        var decode    = $("#textarea-dec").val();
+
+        if (!decode) {
+            alert('请输入需要解密的内容');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/baseAction",
+            dataType: "json",
+            data:{decode:decode},
+            success: function(data){
+                if(data.code == 0){
+                    $("#textarea-dec-show").val(data.data.decode);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

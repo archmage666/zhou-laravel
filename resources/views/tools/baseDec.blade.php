@@ -14,16 +14,16 @@
             <div class="tools-base-content-main">
                 <div class="tools-base-top">
                     <label class="block">原码</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc" placeholder="输入需要base64加密的内容"></textarea>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-dec" placeholder="输入经过base64编码后的内容"></textarea>
                 </div>
 
                 <div class="tools-base-bottom">
-                    <label class="block">base64编码后</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc-show" placeholder="这里将显示base64加密后的内容"></textarea>
+                    <label class="block">base64解码后</label>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-dec-show" placeholder="这里将显示base64解码后的内容"></textarea>
                 </div>
 
                 <div class="base-but">
-                    <input type="button" id="base64Enc" value="Base64加密" class="base64Btn">
+                    <input type="button" id="base64Dec" value="Base64解码" class="base64Btn">
                 </div>
                 <div class="clear"></div>
             </div>
