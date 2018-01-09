@@ -33,13 +33,15 @@
 
         <div class="middle">
             <div class="logo">
-                <a href="">
+                <a href="/">
                     <img src="{{ asset('images/logo.png') }}" />
                 </a>
             </div>
             <div class="advertising">
                 <div class="advertising-box ml10">
-                    <a href=""><img src="" /></a>
+                    <a href="/">
+                        <img src="{{ asset('images/agg-banner.jpg') }}" />
+                    </a>
                 </div>
             </div>
             <div class="clear"></div>
