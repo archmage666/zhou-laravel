@@ -198,6 +198,7 @@ $(function(){
 /**
  * 短链接操作
  */
+//生成
 $(function(){
     $('#tdurlen').click(function(){
 
@@ -223,7 +224,32 @@ $(function(){
         });
     });
 });
+//解析
+$(function(){
+    $('#tdurlde').click(function(){
 
+        var tdurlde    = $("#textarea-tdurlde").val();
+
+        if (!tdurlde) {
+            alert('请输入经本站生成的短链接');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/tdurlAction",
+            dataType: "json",
+            data:{tdurlde:tdurlde},
+            success: function(data){
+                if(data.code == 0){
+                    $("#textarea-dec-show").val(data.data.tdurlde);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
 
 
 

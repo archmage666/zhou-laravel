@@ -11,7 +11,7 @@ use Illuminate\Support\ServiceProvider;
 class ToolsServiceProvider extends ServiceProvider
 {
 
-    const KeyCode = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$';
+    const KeyCode = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_=';
 
     /**
      * 注册服务
@@ -22,7 +22,6 @@ class ToolsServiceProvider extends ServiceProvider
     {
         $this->app->instance('tdurl.tools', $this);
     }
-
 
     /**
      * 将64进制的数字字符串转为10进制的数字字符串
@@ -45,6 +44,7 @@ class ToolsServiceProvider extends ServiceProvider
             $one = $m[$i];
             $hex2 .= str_pad(decbin($KeyCode[$one]), 6, '0', STR_PAD_LEFT);
         }
+
         $return = bindec($hex2);
 
         if($len) {

@@ -52,13 +52,14 @@ class ToolsController extends Controller
             {
 
                 $tdurlen = $request->input('tdurlen','');
+                $tdurlde = $request->input('tdurlde','');
 
                 if(!empty($tdurlen))
                 {
                     //处理短链接生成逻辑
                     $data = [
 
-                        's_url' => $tdurlen,
+                        's_url' => trim($tdurlen),
                         'ip' => $request->getClientIp()
 
                     ];
@@ -68,10 +69,44 @@ class ToolsController extends Controller
                     //先将自增id返回一个64进制数
                     $num = app('tdurl.tools')->hex10to64($shorturl->id);
                     //重新拼接出一个url地址
-                    $url = 'tdurl.cn/'.$num;
+                    $url = 'zhou.laravel.com/'.$num;
+                    //将生成的短链接也存进mysql
+                    $shorturl->e_url = $url;
+
+                    $shorturl->save();
 
                     json_return(0,'短链接已生成',['tdurlen' => $url]);
                 }
+
+
+                if(!empty($tdurlde))
+                {
+
+                    //截取域名“/”后的参数
+                    $parameter = explode('/',trim($tdurlde));
+                    //匹配出mysql中的自增id，拿出完整的初始url
+                    if(!preg_match("/^[x4e00-x9fa5]+$/u",$parameter[1])){
+
+                        json_return(4,'输入的url有误',[]);
+
+                    }
+                    //将参数由64进制转换成10进制并查询数据库
+                    $id = app('tdurl.tools')->hex64to10($parameter[1]);
+
+                    $row = Shorturl::where('id', '=', $id)->first();
+
+                    if(!empty($row))
+                    {
+
+                        json_return(0,'短链接解析成功',['tdurlde' => $row->s_url]);
+
+                    }
+
+                    json_return(5,'该url不存在',[]);
+
+                }
+
+                json_return(1,'参数错误',[]);
 
             }
 
