@@ -249,6 +249,8 @@ class ToolsController extends Controller
 
             }
 
+            json_return(2,'非法请求',[]);
+
 
         } catch (\Exception $e) {
             //$e->getMessage()." ".$e->getFile()." ".$e->getLine();
