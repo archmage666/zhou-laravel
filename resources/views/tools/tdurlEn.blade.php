@@ -21,17 +21,17 @@
         <div class="tools-tdurl-content">
             <div class="tools-tdurl-content-main">
                 <div class="tools-tdurl-top">
-                    <label class="block">原码</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-urlen" placeholder="需要进行tdurl加密的url地址"></textarea>
+                    <label class="block">原Url地址</label>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-tdurlen" placeholder="原Url地址"></textarea>
                 </div>
 
                 <div class="tools-tdurl-bottom">
-                    <label class="block">tdurl加密后</label>
-                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc-show" placeholder="tdurl加密后的内容"></textarea>
+                    <label class="block">生成的短链接形式Url地址</label>
+                    <textarea class="p10 w700 h200 tools-textarea" id="textarea-enc-show" placeholder="短链接生成后的Url"></textarea>
                 </div>
 
                 <div class="tdurl-but">
-                    <input type="button" id="tdurl" value="tdurl加密" class="tdurlBtn">
+                    <input type="button" id="tdurlen" value="生成短链接" class="tdurlBtn">
                 </div>
                 <div class="clear"></div>
             </div>

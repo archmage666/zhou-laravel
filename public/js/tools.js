@@ -195,7 +195,34 @@ $(function(){
         });
     });
 });
+/**
+ * 短链接操作
+ */
+$(function(){
+    $('#tdurlen').click(function(){
 
+        var tdurlen    = $("#textarea-tdurlen").val();
+
+        if (!tdurlen) {
+            alert('请输入需要生成短链接的原url地址');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/tools/tdurlAction",
+            dataType: "json",
+            data:{tdurlen:tdurlen},
+            success: function(data){
+                if(data.code == 0){
+                    $("#textarea-enc-show").val(data.data.tdurlen);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    });
+});
 
 
 

@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Providers\Tools\ToolsServiceProvider;
 use Illuminate\Http\Request;
+use App\Model\Shorturl;
 
 class ToolsController extends Controller
 {
+
+    public function __construct()
+    {
+        //注册tools服务类
+        app()->register(ToolsServiceProvider::class);
+    }
 
     /**
      * 短链接生成页面 模版
@@ -29,12 +37,50 @@ class ToolsController extends Controller
     /**
      * 短链接生成 解析 操作方法
      *
+     * win系统先这样，整理一下线上思路用于备忘
+     * 1.利用key-value缓存方法，当一个url申请短链接插入数据库同时将该原始url作为key，生成的短链接作为value缓存起来
+     * 2.当有原始url过来申请生成时，以原始url为key查询该缓存，如果有立即返回该url已经生成的短链接
+     *
      * @param Request $request
      */
     public function tdurlAction(Request $request)
     {
 
+        try {
 
+            if ($request->ajax())
+            {
+
+                $tdurlen = $request->input('tdurlen','');
+
+                if(!empty($tdurlen))
+                {
+                    //处理短链接生成逻辑
+                    $data = [
+
+                        's_url' => $tdurlen,
+                        'ip' => $request->getClientIp()
+
+                    ];
+
+                    $shorturl = Shorturl::create($data);
+
+                    //先将自增id返回一个64进制数
+                    $num = app('tdurl.tools')->hex10to64($shorturl->id);
+                    //重新拼接出一个url地址
+                    $url = 'tdurl.cn/'.$num;
+
+                    json_return(0,'短链接已生成',['tdurlen' => $url]);
+                }
+
+            }
+
+            json_return(2,'非法请求',[]);
+
+
+        } catch (\Exception $e) {
+            json_return(-1,$e->getMessage(),[]);
+        }
 
     }
 
