@@ -81,13 +81,20 @@ class ToolsController extends Controller
 
                 if(!empty($tdurlde))
                 {
+                    //判断是否还有url字符/
+                    if(stripos($tdurlde,'/') == false){
+
+                        json_return(4,'输入的url有误',[]);
+
+                    }
 
                     //截取域名“/”后的参数
                     $parameter = explode('/',trim($tdurlde));
+
                     //匹配出mysql中的自增id，拿出完整的初始url
                     if(!preg_match("/^[x4e00-x9fa5]+$/u",$parameter[1])){
 
-                        json_return(4,'输入的url有误',[]);
+                        json_return(5,'输入的url有误',[]);
 
                     }
                     //将参数由64进制转换成10进制并查询数据库
@@ -102,7 +109,7 @@ class ToolsController extends Controller
 
                     }
 
-                    json_return(5,'该url不存在',[]);
+                    json_return(6,'该url不存在',[]);
 
                 }
 
