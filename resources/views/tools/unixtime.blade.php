@@ -28,7 +28,7 @@
 
                 <div class="tools-unixtime-right">
                     <input type="button" value="转换成北京时间" id="firstbutton" class="tools-unixtime-right-con">
-                    <input type="text" value="" id="firsttimeshow" size="20" readonly />
+                    <input type="text" value="<?php echo date('Y-m-d H:i:s',time()); ?>" id="firsttimeshow" size="20" readonly />
                 </div>
                 <div class="clear"></div>
 
@@ -39,7 +39,7 @@
 
                 <div class="tools-unixtime-right mt50">
                     <input type="button" value="转换成Unix时间戳" id="secondbutton" class="tools-unixtime-right-con">
-                    <input type="text" value="" id="secondtimeshow" size="20" readonly />
+                    <input type="text" value="<?php echo time(); ?>" id="secondtimeshow" size="20" readonly />
                 </div>
                 <div class="clear"></div>
 
