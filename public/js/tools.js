@@ -118,7 +118,7 @@ $(function(){
 $(function(){
     $('#base64Dec').click(function(){
 
-        var decode    = $("#textarea-dec").val();
+        var decode = $("#textarea-dec").val();
 
         if (!decode) {
             alert('请输入需要解密的内容');

@@ -257,11 +257,16 @@ class ToolsController extends Controller
             if(!empty($decode))
             {
 
+                if(is_base64((string)$decode) === false)
+                {
+                    json_return(3,'您输入的不是base64编码内容，无法解密',[]);
+                }
+
                 $basedecode = base64_decode($decode);
 
                 if($basedecode === false || $basedecode == ''){
 
-                    json_return(3,'输入内容有误',[]);
+                    json_return(4,'输入内容有误',[]);
 
                 }
 
@@ -269,7 +274,7 @@ class ToolsController extends Controller
 
             }
 
-            json_return(4,'参数错误',[]);
+            json_return(5,'参数错误',[]);
 
         }
 
